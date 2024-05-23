@@ -1,31 +1,60 @@
 body {
   font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f0f0f0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.container {
+:root {
+  --bg-color: #f0f0f0;
+  --text-color: #000;
+}
+
+[data-theme="dark"] {
+  --bg-color: #2c2c2c;
+  --text-color: #fff;
+}
+
+header {
   text-align: center;
+  margin: 20px 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  width: 80%;
+  max-width: 1200px;
+}
+
+.timer-box {
   background: white;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
-h1 {
-  font-size: 2em;
-  margin-bottom: 20px;
+[data-theme="dark"] .timer-box {
+  background: #444;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+  h3 {
+    color: #000;
+  }
+  div.display {
+    color: #444;
+  }
 }
 
 .display {
-  /* font-family: "Digital-7", sans-serif; */
-  font-family: "Orbitron", sans-serif;
-  font-size: 3em;
-  margin-bottom: 20px;
+  font-family: "Digital-7", sans-serif;
+  font-size: 2em;
+  margin: 10px 0;
 }
 
 .buttons button {
@@ -41,5 +70,22 @@ h1 {
 }
 
 .buttons button:hover {
+  background-color: #0056b3;
+}
+
+#toggleThemeBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+#toggleThemeBtn:hover {
   background-color: #0056b3;
 }

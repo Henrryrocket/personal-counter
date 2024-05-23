@@ -3,20 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
-
-    <title>Cronómetro - Actividad 1</title>
+    <title>Cronómetros de Actividades</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Actividad 1</h1>
-        <div id="display" class="display">00:00:00</div>
-        <div class="buttons">
-            <button id="startStopBtn">Iniciar</button>
-            <button id="resetBtn">Reiniciar</button>
+    <header>
+        <h1>Cronómetros de Actividades</h1>
+        <h2>Registro de tiempo para diferentes tareas</h2>
+    </header>
+    <main class="grid-container">
+        <div class="timer-box" id="timer1" style="background-color: #ffcccc;">
+            <h3>Actividad 1</h3>
+            <div class="display" id="display1">00:00:00</div>
+            <div class="buttons">
+                <button id="startStopBtn1">Iniciar</button>
+                <button id="resetBtn1">Reiniciar</button>
+            </div>
         </div>
-    </div>
+        <div class="timer-box" id="timer2" style="background-color: #ccffcc;">
+            <h3>Actividad 2</h3>
+            <div class="display" id="display2">00:00:00</div>
+            <div class="buttons">
+                <button id="startStopBtn2">Iniciar</button>
+                <button id="resetBtn2">Reiniciar</button>
+            </div>
+        </div>
+        <div class="timer-box" id="timer3" style="background-color: #ccccff;">
+            <h3>Actividad 3</h3>
+            <div class="display" id="display3">00:00:00</div>
+            <div class="buttons">
+                <button id="startStopBtn3">Iniciar</button>
+                <button id="resetBtn3">Reiniciar</button>
+            </div>
+        </div>
+        <div class="timer-box" id="timer4" style="background-color: #ffffcc;">
+            <h3>Actividad 4</h3>
+            <div class="display" id="display4">00:00:00</div>
+            <div class="buttons">
+                <button id="startStopBtn4">Iniciar</button>
+                <button id="resetBtn4">Reiniciar</button>
+            </div>
+        </div>
+    </main>
+    <button id="toggleThemeBtn">Modo Oscuro</button>
     <script src="script.js"></script>
 </body>
 </html>
